@@ -4,7 +4,8 @@ const registerSchema = mongoose.Schema({
     
     email:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     username:{
         type: String,
@@ -18,3 +19,5 @@ const registerSchema = mongoose.Schema({
 });
 
 const registerModel = mongoose.model("registerModel", registerSchema);
+
+export default registerModel;
